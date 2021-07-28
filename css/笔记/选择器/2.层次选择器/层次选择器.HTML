@@ -1,0 +1,50 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-11-14 11:27:01
+ * @LastEditors: Weidows
+ * @LastEditTime: 2020-11-14 23:40:01
+ * @FilePath: \Weidows\CSS\Study\选择器\html\层次选择器.HTML
+ * @Description:
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>层次选择器</title>
+    <style>
+      /* 后代选择器
+      对于ul后面的所有p标签 */
+      ul p {
+        /* background: red; */
+      }
+
+      /* 子选择器
+      对于body里面第一代的p标签 */
+      body > p {
+        /* background: green; */
+      }
+
+      /* 相邻(兄弟)选择器
+      对于选中的标签的下一个同级标签 */
+      #action + p {
+        /* background: tomato; */
+      }
+
+      /* 通用(兄弟)选择器 */
+      #action ~ p {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="action">p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <ul>
+      <li><p>p4</p></li>
+      <li><p>p5</p></li>
+      <li><p>p6</p></li>
+    </ul>
+  </body>
+</html>

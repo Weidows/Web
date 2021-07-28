@@ -1,0 +1,63 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-08-13 11:41:57
+ * @LastEditors: Weidows
+ * @LastEditTime: 2020-11-17 22:46:27
+ * @FilePath: \Weidows\Web\页面美化\文本\textStyle.HTML
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>textStyle</title>
+    <style>
+      /* 约定俗成的,把比较重点的内容一般用span修饰便于修改 */
+      #span1 {
+        /*
+        color指定方法:
+          1.red
+          2.#FF0000
+          3.rgb(255,0,0)/rgb(100%,0%,0%)
+          4.rgba(255,0,0,0.9)
+          开发中最常用的是2.十六进制方式
+        */
+        color: red;
+      }
+      .p1 {
+        /* 首行缩进2字符 */
+        text-indent: 2em;
+
+        /* 居中对齐 */
+        text-align: center;
+
+        /* 块高 && 行高(这两个高度一致就可以上下居中) */
+        height: 100px;
+        line-height: 100px;
+        background: green;
+
+        /* 上中下划线(这三个只能同时生效一个) */
+        /* text-decoration: overline; */
+        /* text-decoration: line-through; */
+        text-decoration: underline;
+      }
+
+      /* 文本相对图片垂直居中 */
+      img,
+      #span2 {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="p1">欢迎学习<span id="span1">Java</span></p>
+
+    <img src="./assets/2020-11-17-22-38-18.png" alt="" />
+    <span id="span2">djaowidjalwdjaoidj</span>
+  </body>
+</html>

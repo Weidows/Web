@@ -1,0 +1,232 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-08-07 16:07:42
+ * @LastEditors: Weidows
+ * @LastEditTime: 2020-11-22 22:08:05
+ * @FilePath: \Weidows\Web\标签\下.HTML
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>标签-下</title>
+  </head>
+
+  <body>
+    <!-- !表单标签 -->
+    <!-- 表单域 -->
+    <h1>44-表单域</h1>
+    <form action="demo.php" method="POST" name="form1">这是空表单</form>
+
+    <!-- 表单元素
+    给一系列表单元素加上相同的name可进行组合(同标签间识别)
+    加上id是用于不同标签间的识别 -->
+    <h1>45-51表单元素</h1>
+    <form action="demo.php" method="POST" name="form2">
+      <!-- /输入框 -->
+      用户名:<input type="text" name="UserName" value="请输入用户名" /><br />
+      密码:<input type="password" name="Password" value="2333" /><br />
+
+      <!-- /单选按钮(必须给定相同的name) -->
+      性别: 男<input
+        type="radio"
+        name="gender"
+        value="male"
+        checked="checked"
+      />
+      女<input type="radio" name="gender" value="female" /> 扶她<input
+        type="radio"
+        name="gender"
+        value="futa"
+      /><br />
+
+      <!-- /多选按钮 -->
+      爱好: 吃饭
+      <input type="checkbox" name="hobby" value="吃饭" checked="checked" />
+      睡觉<input type="checkbox" name="hobby" value="睡觉" checked="checked" />
+      打豆豆<input type="checkbox" name="hobby" value="打豆豆" /><br />
+
+      <!-- /重置按钮  把表单重置为初始状态-->
+      <input type="reset" value="这是重置按钮" />
+
+      <!-- /普通按钮  多数情况配合JS使用-->
+      <input type="button" value="这是普通按钮(获取短信验证码)" /><br />
+
+      <!-- /文件按钮 -->
+      上传头像:<input type="file" /><br />
+
+      <!-- /提交按钮  把form提交给指定的后端服务器-->
+      <input type="submit" value="这是提交按钮(注册)" /><br />
+    </form>
+
+    <!--  label标签 (经常搭配input使用)
+    <input type="radio" id="gender">
+    <label for="gender">Gender</label>
+    这样写当点label Gender时相当于点radio-->
+    <h1>52-label标签</h1>
+    <form name="form3">
+      <label for="UserName">用户名:</label>
+      <input type="text" id="UserName" value="请输入用户名" /><br />
+
+      性别:
+      <input type="radio" name="gender" value="male" id="Gender_male" />
+      <label for="Gender_male">男</label>
+      <input type="radio" name="gender" value="female" id="Gender_female" />
+      <label for="Gender_female">女</label>
+    </form>
+
+    <!-- 表单控件
+    input输入(上面) select下拉  textarea文本域-->
+    <h1>53-54表单控件</h1>
+
+    <!-- /select下拉 -->
+    籍贯:
+    <select>
+      <!-- 至少包含一对option -->
+      <option>山东</option>
+      <option selected="selected">河北</option>
+      <!-- 默认选中状态 -->
+      <option>天津</option></select
+    ><br />
+
+    <!-- /文本域标签(大号文本框,留言板/评论) -->
+    详细住址:
+    <textarea>这是文本域标签</textarea><br />
+
+    <!-- !表单案例 -->
+    <h1>55-59表单案例</h1>
+    <h3>青春不常在,抓紧谈恋爱</h3>
+    <table width="500" border="0">
+      <tr>
+        <th>性别:</th>
+        <td>
+          <input type="radio" name="gender" id="man" checked="checked" />
+          <label for="man">男</label>
+          <input type="radio" name="gender" id="woman" />
+          <label for="woman">女</label>
+        </td>
+      </tr>
+
+      <tr>
+        <th>生日:</th>
+        <td>
+          <select>
+            <option>--请选择年份--</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+          </select>
+
+          <select>
+            <option>--请选择月份--</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+
+          <select>
+            <option>--请选择日期--</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <th>所在地区:</th>
+        <td>
+          <input type="text" value="请输入所在地区" />
+        </td>
+      </tr>
+
+      <tr>
+        <th>婚姻状况:</th>
+        <td>
+          <input type="radio" name="IsMerry" id="WeiHun" checked="checked" />
+          <label for="WeiHun">未婚</label>
+
+          <input type="radio" name="IsMerry" id="YiHun" />
+          <label for="YiHun">已婚</label>
+
+          <input type="radio" name="IsMerry" id="LiHun" />
+          <label for="LiHun">离婚</label>
+        </td>
+      </tr>
+
+      <tr>
+        <th>学历:</th>
+        <td>
+          <select>
+            <option>高中</option>
+            <option>大专</option>
+            <option selected="selected">本科</option>
+            <option>硕士</option>
+            <option>博士</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <th>喜欢的类型:</th>
+        <td>
+          <input type="checkbox" name="love" id="Rori" checked="checked" />
+          <label for="Rori">萝莉</label>
+
+          <input type="checkbox" name="love" id="Rori2" checked="checked" />
+          <label for="Rori2">18</label>
+
+          <input type="checkbox" name="love" id="Sister" />
+          <label for="Sister">御姐</label>
+        </td>
+      </tr>
+
+      <tr>
+        <th>自我介绍:</th>
+        <td>
+          <textarea>说点啥吧</textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <th></th>
+        <td>
+          <input type="submit" value="免费注册" />
+        </td>
+      </tr>
+
+      <tr>
+        <th></th>
+        <td>
+          <input type="checkbox" checked="checked" id="TiaoKuan" />
+          <label for="TiaoKuan">同意霸王条款</label>
+        </td>
+      </tr>
+
+      <tr>
+        <th></th>
+        <td>
+          <a href="#">我是会员,立即登录</a>
+        </td>
+      </tr>
+
+      <tr>
+        <th></th>
+        <td>
+          <dl>
+            <dt>我承诺</dt>
+            <dd>年满18周岁,单身</dd>
+            <dd>抱着严肃地态度</dd>
+            <dd>真诚寻找另一半</dd>
+          </dl>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

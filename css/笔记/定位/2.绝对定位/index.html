@@ -1,0 +1,49 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-12-06 00:38:05
+ * @LastEditors: Weidows
+ * @LastEditTime: 2020-12-20 00:41:11
+ * @FilePath: \Weidows\Web\定位\2.绝对定位\index.html
+ * @Description:
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ! css自上之下写选择器便于查找索引 -->
+    <style>
+      div {
+        margin: 10px;
+        padding: 5px;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      #father {
+        border: 1px solid #666;
+        /* 这里父级元素虽然用了相对定位了,但是并没动,子级元素用来作绝对定位. */
+        position: relative;
+      }
+      #first {
+        border: 1px dashed rgb(172, 96, 96);
+        /* 相对于父级元素左端定位 */
+        position: absolute;
+        left: 50px;
+      }
+      #second {
+        border: 1px dashed rgb(87, 23, 23);
+      }
+      #third {
+        border: 1px dashed rgb(111, 189, 33);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="father">
+      <div id="first">第一个盒子</div>
+      <div id="second">第二个盒子</div>
+      <div id="third">第三个盒子</div>
+    </div>
+  </body>
+</html>

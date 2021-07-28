@@ -1,0 +1,24 @@
+#recruit {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+#recruit td,
+#recruit th {
+  border: px solid orange;
+  padding: 7px;
+}
+
+#recruit th {
+  background-color: orange;
+  color: #ffffff;
+}
+
+#recruit tr.orange {
+  background-color: #ffeddb;
+}
+
+a {
+  text-decoration: none;
+}

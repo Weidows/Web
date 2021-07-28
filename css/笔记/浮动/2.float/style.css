@@ -1,0 +1,49 @@
+div {
+  margin: 10px;
+  padding: 5px;
+}
+
+#father {
+  border: 1px solid #000;
+  /* 方案三 */
+  /* overflow: hidden; */
+}
+
+/* 方案四 */
+#father:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.layer01 {
+  border: 1px dashed #f00;
+  display: inline-block;
+  float: left;
+}
+.layer02 {
+  border: 1px dashed #00f;
+  display: inline-block;
+  float: left;
+}
+.layer03 {
+  border: 1px dashed #0f0;
+  display: inline-block;
+  float: right;
+}
+.layer04 {
+  border: 1px dashed #666;
+  font-size: 12px;
+  line-height: 23px;
+  display: inline-block;
+  float: right;
+  /* 解决方案一 */
+  /* clear: both; */
+}
+
+/* 方案二 */
+#clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}

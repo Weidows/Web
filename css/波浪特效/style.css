@@ -1,0 +1,136 @@
+html,
+body {
+  background: whitesmoke;
+  color: darkslategrey;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+#background,
+#bottle,
+#foreground {
+  position: absolute;
+}
+#wave {
+  bottom: 0;
+  height: calc(40vh + 20vw);
+}
+#bottle {
+  transition: all 1s cubic-bezier(0.3, 0.3, 0, 1.5);
+}
+#bottle.hidden {
+  transform: translateY(-50vh);
+}
+#header {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  top: 0;
+  height: calc(64vh - 6vw);
+  padding: 6vh 4vw 0;
+  box-sizing: border-box;
+}
+#arrow {
+  width: calc(4vh + 2vw);
+  flex-shrink: 0;
+}
+#prompt {
+  font: calc(2vh + 1.5vw) serif;
+  margin: 1vh;
+}
+#title {
+  font: bold calc(6vh + 3vw) serif;
+  margin-top: 0;
+  margin-bottom: auto;
+  text-align: center;
+}
+#title > span {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+@supports (
+  (-webkit-backdrop-filter: blur(0.5em)) or (backdrop-filter: blur(0.5em))
+) {
+  #dialog {
+    transition: all 0.3s ease-in-out !important;
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
+    background: rgba(255, 255, 255, 0.2) !important;
+  }
+}
+#dialog {
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  height: 100%;
+  padding: 8vh 6vw 0;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+}
+#dialog.hidden {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+@media (hover: none) {
+  #dialog-trigger {
+    outline: none;
+    background: rgba(255, 255, 255, 0.67);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.4);
+  }
+}
+@media (hover: hover) {
+  #dialog-trigger {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  #dialog-trigger:hover,
+  #dialog-trigger:focus {
+    background: rgba(255, 255, 255, 0.67);
+  }
+  #dialog-trigger:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.4);
+  }
+}
+#dialog-trigger {
+  padding: 1vh calc(0.5rem + 0.5vw);
+  margin: 8vh 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  font: bolder calc(1rem + 1vw) serif;
+  color: darkslategrey;
+  border: none;
+  border-radius: 0.5rem;
+}
+#blessing {
+  margin: 0;
+  font: bolder calc(1.5rem + 1vw) serif;
+  text-indent: 2em;
+  text-align: justify;
+  width: 100%;
+  overflow: auto;
+}
+#blessing::-webkit-scrollbar {
+  display: none;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+.fade {
+  transition: all 0.3s ease-in-out;
+}
+.hidden {
+  opacity: 0;
+}

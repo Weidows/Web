@@ -1,0 +1,53 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-08-11 09:16:30
+ * @LastEditors: Weidows
+ * @LastEditTime: 2020-11-15 23:52:26
+ * @FilePath: \Weidows\CSS\Study\选择器\基本选择器\基本选择器.HTML
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../CSS/基本选择器.css" /> -->
+    <style>
+      /*
+      这里是CSS代码,注释样式不一样
+      下面是导入式引入css样式
+      */
+      @import url("./基本选择器.css");
+    </style>
+  </head>
+  <body>
+    <!-- !class选择器 -->
+    <p>man</p>
+    <p>man</p>
+    <p>man</p>
+    <div>woman</div>
+    <div>woman</div>
+    <div class="Span">woman</div>
+    <span class="Span">123</span>
+    <span class="Span">123</span>
+    <span>123</span>
+
+    <!--
+      !class小案例
+      通过这个可以看出id选择器权限最高
+    -->
+    <div class="Red Div">红1</div>
+    <div class="Green Div">绿1</div>
+    <div class="Red Div" id="Div-3">红2</div>
+
+    <!--
+      !行内样式
+      * 非建议式写法
+     -->
+    <h1 style="color: aqua;">行内样式</h1>
+  </body>
+</html>

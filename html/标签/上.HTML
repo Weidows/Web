@@ -1,0 +1,249 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-08-07 09:57:10
+ * @LastEditors: Weidows
+ * @LastEditTime: 2021-06-10 14:04:28
+ * @FilePath: \Weidows\Web\html\标签\上.HTML
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>标签-上</title>
+  </head>
+
+  <body>
+    <!-- !段落,标题换行标签 -->
+    <h1>14-15-段落,标题换行标签</h1>
+    <!-- 标题标签 -->
+
+    <h2>一</h2>
+    <!-- 四级标题标签,下面是段落标签,段落标签会换行 -->
+    <p>
+      《花木兰》，是好莱坞的又一部公主系列真人大电影。且因为早期迪士尼的动画电影《花木兰》的全球播出，让这个IP成了全球都有热度的大IP。
+    </p>
+
+    <h3>二</h3>
+    <p>
+      如今的真人版，选择了华人女演员刘亦菲主演，再加上中国传统故事的改编，所以在国外和国内都拥有超高的期待值。
+    </p>
+
+    <h4>三</h4>
+    <p>
+      然而，这样一部前景一片大好的电影，自从准备上映后，却遇到了各种各样的不顺利。
+    </p>
+
+    @Weidows
+    <br /><!-- 换行标签 -->
+
+    <!-- !文本格式化标签
+    ?加粗: <strong></strong> 或<b></b>
+    ?倾斜: <em></em>  或<i></i>
+    ?删除线: <del></del>  或<s></s>
+    ?下划线: <ins></ins>  或<u></u>
+  -->
+    <h1>16-文本格式化标签</h1>
+
+    我是<strong>加粗</strong>的文字 我是<b>加粗</b>的文字
+    <br /><!-- *剩下的脑补...差不多,略 -->
+
+    <!-- !HTML常用标签
+    ? <div></div>  <span></span>这俩双标签是没有语义的盒子
+    ? 每个div独占一行,span一行可以放多个
+  -->
+    <h1>17-HTML常用标签</h1>
+
+    <div>独占一行的div</div>
+    <div>独占一行的div</div>
+    <span>一行多个span1</span>
+    <span>一行多个span2</span>
+    <span>一行多个span3</span>
+
+    <!-- !图像标签和路径
+    ? src 图片路径,根目录是相对于HTML文件存放的目录来说的,绝对路径可以是URL(不推荐本地绝对路径)
+    ? alt 当图片不能在正常显示时显示的文本信息
+    ? title 鼠标hover时的提示信息
+    ? width height 像素大小
+    ? border 图像边框像素大小
+  -->
+    <h1>18-20-图像标签和路径</h1>
+
+    <img
+      id="Cai"
+      src="./img/1531684.jpg"
+      alt="看到这句话说明图片无法显示"
+      title="这是蔡徐坤"
+      width="600"
+      height="500"
+      border="50"
+    />
+
+    <!-- !超链接标签
+    ? <a href="" target=""> 内容 </a>
+    ? herf跳转URL或文件 target="_blank"在新标签页打开 或 "_self"在本标签页打开
+    * 注意herf需要加上通讯协议
+  -->
+    <h1>25-27-超链接标签</h1>
+
+    <a href="https://www.baidu.com" target="_blank">超链接:百度</a>
+
+    <!-- 空链接跳转到本身网页 -->
+    <a href="#" target="_blank">空:链接</a>
+
+    <!-- 如果herf给的是文件,那么会变成下载链接(根据文件类型有所不同) -->
+    <a href="./img/1531684.jpg" target="_blank">下载:蔡徐坤</a>
+
+    <!-- 任何网页元素都可以添加超链接,只需要在外层套上<a>标签就行 -->
+    <br />
+    <a href="https://www.baidu.com" target="_blank">
+      <img
+        src="./img/1531684.jpg"
+        alt="看到这句话说明图片无法显示"
+        title="跳转到百度"
+        width="600"
+        height="500"
+        border="50"
+      />
+    </a>
+
+    <!-- 锚点链接(跳转到本页面某个位置) -->
+    <br />
+    <a href="#Cai">跳转到蔡徐坤*照</a>
+
+    <!-- !表格 -->
+    <h1>36-表格结构标签</h1>
+
+    <img src="./img/表格属性.jpg" width="800" height="500" />
+    <!-- 整个表格元素
+        ? align是表格的对齐方式而非内部数据的对齐方式,border是是否加边框
+        ? cellspacing是框与框间的空隙,cellpadding是字与框间的空隙
+        ? 同样也可以通过width和height改变大小(也可以通过百分比改,百分比是相对页面大小的百分比)
+      -->
+    <table
+      align="center"
+      cellspacing="10"
+      cellpadding="20"
+      border="1"
+      width="100%"
+    >
+      <!-- 表头区域 -->
+      <thead>
+        <!-- tr是每一行,行内th,td单元格可以放任何元素 -->
+        <tr>
+          <th>姓名</th>
+          <!--  每一行中的每个单元格 -->
+          <th>性别</th>
+          <!--  th是表头单元格文字加粗居中显示 -->
+          <th>年龄</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>刘德华</td>
+          <!-- td是普通的单元格 -->
+          <td>男</td>
+          <td>56</td>
+        </tr>
+
+        <tr>
+          <td>张学友</td>
+          <td>男</td>
+          <td>58</td>
+        </tr>
+
+        <tr>
+          <td>郭富城</td>
+          <td>男</td>
+          <td>51</td>
+        </tr>
+
+        <tr>
+          <td>黎明</td>
+          <td>男</td>
+          <td>57</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- !合并单元格
+        跨行合并:rowspan="合并个数" 在最上面的单元格写
+        跨列合并:colspan="合并个数" 在最左面的单元格写
+      -->
+    <h1>37-合并单元格</h1>
+
+    <table
+      align="center"
+      cellspacing="10"
+      cellpadding="20"
+      border="1"
+      width="100%"
+    >
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>年龄</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>刘德华</td>
+          <td rowspan="3">男</td>
+          <td>56</td>
+        </tr>
+
+        <tr>
+          <td>张学友</td>
+          <td>58</td>
+        </tr>
+
+        <tr>
+          <td>郭富城</td>
+          <td>51</td>
+        </tr>
+
+        <tr>
+          <td>黎明</td>
+          <td span="2">未知</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- !列表
+        分为无序列表,有序列表和自定义列表三类
+        母标签不能随意放东西,但各自的子标签(如li或dd)里面可以放任何东西
+      -->
+    <!-- 无序列表(重要,使用多),ul里面只能放li -->
+    <h1>39-无序列表</h1>
+    <ul>
+      <li>无序1</li>
+      <li>无序2</li>
+      <li>无序3</li>
+    </ul>
+
+    <!-- 有序列表,实际开发中标号一般用CSS去掉,同上只能放li -->
+    <h1>40-有序列表</h1>
+    <ol>
+      <li>刘德华</li>
+      <li>刘若英</li>
+      <li>pink</li>
+    </ol>
+
+    <!-- 自定义列表,dl里也是只能放dt和dd,这两个可以乱序重复出现 -->
+    <h1>41-自定义列表</h1>
+    <dl>
+      <dt>关注我们</dt>
+      <!-- 作用类似表头 -->
+      <dd>新浪微博</dd>
+      <dd>官方微信</dd>
+      <dd>联系我们</dd>
+    </dl>
+  </body>
+</html>

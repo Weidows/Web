@@ -1,0 +1,42 @@
+/* 标签选择器 */
+  p {
+    color: deeppink;
+  }
+
+  div {
+    color: aqua;
+  }
+
+/* class选择器 会覆盖上面标签选择器的样式(即使顺序调换),开发常用*/
+  .Span {
+    color: chartreuse;
+  }
+
+/* class小案例 & 多类名*/
+  .Div {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+  }
+
+  .Red {
+    background-color: red;
+  }
+
+  .Green {
+    /* 在多类名中重复指定样式的话,样式为最后指定的class类型 */
+    width: 200px;
+    height: 100px;
+    background-color: green;
+  }
+
+/* id选择器 覆盖权限最高,多用于修改页面单一元素,多与JavaScript结合使用*/
+  #Div-3 {
+    color: blueviolet;
+  }
+
+/* 通配符选择器 权限较低*/
+  * {
+    width: auto;
+  }
+  /* 另外可以给body{}设置样式,全局生效(除了标题标签特殊,必须指定设置) */

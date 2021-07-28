@@ -1,0 +1,36 @@
+#nav{
+  width: 300px;
+  background: rgba(245, 245, 245, 0.597);
+}
+
+.title{
+  font-size: 18px;
+  font-weight: bold;
+  text-indent: 2em;
+  line-height: 35px;
+  background:red;
+}
+
+ul li{
+  height: 30px;
+  /* list-style
+    none 去掉圆点
+    circle 空心圆
+    decimal 序号
+    square 正方形
+  */
+  list-style: none;
+  text-indent: 1em;
+}
+
+a{
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+a:hover{
+  color: orange;
+  font-size: 20px;
+  text-decoration: underline;
+}

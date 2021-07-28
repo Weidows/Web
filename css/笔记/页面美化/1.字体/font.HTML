@@ -1,0 +1,42 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-08-13 10:44:11
+ * @LastEditors: Weidows
+ * @LastEditTime: 2020-11-17 22:01:02
+ * @FilePath: \Weidows\Web\页面美化\字体\font.HTML
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>font</title>
+    <style>
+      * {
+        /* 从左到右依次检查是否有指定字体,有的话就使用.注意像是第一个T罗马字体这种分段的要用单引号括起来,常用字体一般是微软雅黑,宋体,T罗马 */
+        font-family: "Times New Roman", Times, serif;
+
+        /* 谷歌浏览器字体默认16px(会根据屏幕大小略有变动) */
+        font-size: 16px;
+
+        /* 跟VScode一样,实际开发中常用实际数字表示加粗/变细(100-900)m默认宽度是400/normal,bold是加粗(700),不用常变细 */
+        font-weight: 500;
+
+        /* 文字样式 正常/斜体italic,一般不给文字加倾斜,常用的是把倾斜字体(em,i)正过来*/
+        font-style: normal;
+
+        /* 行高 */
+        line-height: 20px;
+
+        /*复合属性font:font-style font-weight font-size/line-height font-family,中间空格分隔开,顺序不能颠倒,除了font-size和-family之外其他的可以省略取默认值 */
+        font: italic 700 16px/20px "Times New Roman";
+      }
+    </style>
+  </head>
+
+  <body></body>
+</html>

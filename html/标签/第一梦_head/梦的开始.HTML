@@ -1,0 +1,54 @@
+<!--
+ * @Author: Weidows
+ * @Date: 2020-06-19 22:07:42
+ * @LastEditors: Weidows
+ * @LastEditTime: 2020-08-08 09:46:14
+ * @FilePath: \Weidows\HTML\20-6\第一梦_head\梦的开始.HTML
+-->
+<!DOCTYPE html>
+<!--这个用于声明HTML这个表示超文本-->
+<!--标签分为单标签和双标签,单标签最后需要加'/'表示结束(不加也不会报错)-->
+<html>
+<!--主体框架-->
+
+<head>
+  <!--头部,网页中不显示-->
+  <meta charset="UTF-8" />
+  <!--单标签,网页编码,其中必须写属性-->
+  <title>这儿的文字就是标题</title>
+  <!--网页的标题显示-->
+  <link rel="icon" type="image/x-icon" href="Archive.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="Archive.ico" />
+  <!--地址栏前的图标,与HTML同目录时不用加路径(根目录)
+      改图形标文件格式需要修改type,比如"image/png","image/jpg"....
+      link:引入外部文件
+        rel:定义当前文档与被链接文档间的关系
+        type:定义被链接文档的mime类型
+        href:定义被链接文档的路径
+        标题栏图标大小为16x16像素
+      -->
+  <!-- 为搜索引擎提供的关键字,建议五个以内 -->
+  <meta name="keywords" content="Weidow's Web" />
+  <!-- 网页在搜索引擎标签下现实的解释性内容,建议100字以内 -->
+  <meta name="description" content="The study of mine" />
+  <!-- 页面自动跳转,5就是5秒后跳转,可随意修改;另外如果不写URL,就是页面自动刷新 -->
+  <meta http-equiv="refresh" content="5;url=https://github.com/" />
+  <!-- css样式和文件引入 -->
+  <!-- 1.直接写,这样作用域只有当前页面,不实用 -->
+  <style type="text/css">
+    body {
+      /* 这里写格式 */
+      font-size: 40px;
+    }
+
+  </style>
+  <!-- 2.引入css 文件(常用) -->
+  <link rel="stylesheet" type="text/css" href="test.css" />
+</head>
+
+<body>
+  <!--主体,显示部分-->
+  第一节课
+</body>
+
+</html>
