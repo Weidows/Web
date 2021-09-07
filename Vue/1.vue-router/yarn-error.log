@@ -1,0 +1,48 @@
+Arguments: 
+  D:\Game\Scoop\apps\nvm\current\nodejs\nodejs\node.exe D:\Game\Scoop\apps\yarn\current\Yarn\bin\yarn.js install
+
+PATH: 
+  D:\Game\Scoop\apps\anaconda3\current;D:\Game\Scoop\apps\anaconda3\current\Library\mingw-w64\bin;D:\Game\Scoop\apps\anaconda3\current\Library\usr\bin;D:\Game\Scoop\apps\anaconda3\current\Library\bin;D:\Game\Scoop\apps\anaconda3\current\Scripts;D:\Game\Scoop\apps\anaconda3\current\bin;D:\Game\Scoop\apps\anaconda3\current\condabin;D:\Game\Scoop\apps\pwsh\current;D:\Game\Scoop\apps\vmware-workstation-pro\16.1.0.17198959\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\libnvvp;C:\Windows\system32\WBEM;C:\Windows\system32\WBEM;C:\Windows\system32\WBEM;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Users\29845\AppData\Local\Microsoft\WindowsApps;C:\Users\29845\AppData\Roaming\npm;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Game\Scoop\shims;D:\Game\Scoop\apps\idea-ultimate\current\bin;D:\Game\Scoop\apps\maven\current\bin;D:\Game\Scoop\apps\nodejs\current\bin;D:\Game\Scoop\apps\nodejs\current;D:\Game\Scoop\apps\go-cn\current\global_path\bin;D:\Game\Scoop\apps\llvm-mingw\current\bin;D:\Game\Scoop\apps\yarn\current\global\node_modules\.bin;D:\Game\Scoop\apps\yarn\current\Yarn\bin;D:\Game\Scoop\apps\python\current\Scripts;D:\Game\Scoop\apps\python\current;D:\Game\Scoop\apps\openjdk11\current\bin;D:\Game\Scoop\shims;C:\Program Files\NVIDIA Corporation\Nsight Compute 2021.2.0;C:\Tools\BCURRAN3;D:\Game\Scoop\apps\idea-ultimate\current\bin;D:\Game\Scoop\apps\nu\current\Plugins;D:\Game\Scoop\apps\openjdk8-redhat\current\bin;D:\Game\Scoop\apps\openjdk\current\bin;D:\Game\Scoop\apps\nvm\current\nodejs\nodejs;D:\Game\Scoop\apps\maven\current\bin;D:\Game\Scoop\apps\chocolatey\current\bin;D:\Game\Scoop\apps\latex\current\texmfs\install\miktex\bin\x64;D:\Game\Scoop\apps\winlibs-mingw-llvm\current\bin;D:\Game\Scoop\apps\anaconda3\current\Scripts;D:\Game\Scoop\apps\go-cn\current\global_path\bin;D:\Game\Scoop\apps\yarn\current\global\node_modules\.bin;D:\Game\Scoop\apps\yarn\current\Yarn\bin;D:\Game\Scoop\shims;D:\Game\Scoop\persist\cuda
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.22.5
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/vue: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:7890
+      at ClientRequest.onError (D:\Game\Scoop\apps\yarn\1.22.5\Yarn\lib\cli.js:152235:17)
+      at Object.onceWrapper (events.js:421:26)
+      at ClientRequest.emit (events.js:314:20)
+      at Socket.socketErrorListener (_http_client.js:427:9)
+      at Socket.emit (events.js:314:20)
+      at emitErrorNT (internal/streams/destroy.js:92:8)
+      at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "1.vue-router",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build"
+    },
+    "dependencies": {
+      "vue": "^3.0.4"
+    },
+    "devDependencies": {
+      "vite": "^1.0.0-rc.13",
+      "@vue/compiler-sfc": "^3.0.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

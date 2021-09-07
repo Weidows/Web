@@ -1,0 +1,12 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Weidows-前端笔记",
+  "main": "index.js",
+  "repository": "https://github.com/Weidows/Web.git",
+  "author": "Weidows <utsuko27@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue-router": "^3.5.2"
+  }
+}
