@@ -3,24 +3,37 @@
  * @Author: Weidows
  * @Date: 2021-03-31 20:02:57
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-09 22:26:43
- * @FilePath: \Weidows\Web\html\test\index.html
+ * @LastEditTime: 2021-11-28 09:35:48
+ * @FilePath: \Web\html\test\index.html
  * @Description:
  * @!: *********************************************************************
 -->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>测试</title>
-  </head>
+<html>
   <body>
-    <img
-      src="http://shp.qpic.cn/collector/2984539695/2358b744-2e98-4db0-8287-fa848c20fc73/0"
-      alt=""
-    />
-    <img src="https://i.loli.net/2021/07/04/jFnAHYlXwmf4Ka1.png" alt="" />
+    <canvas
+      id="myCanvas"
+      width="500"
+      height="500"
+      style="border: 1px solid black"
+    >
+      Some text
+    </canvas>
+    <script type="text/javascript">
+      window.canvas = document.getElementById("myCanvas");
+      window.ctx = canvas.getContext("2d");
+
+      ctx.moveTo(40, 40);
+      ctx.lineTo(100, 150);
+      ctx.lineTo(400, 40);
+
+      for (var i = 5; i > 0; i--) {
+        ctx.lineWidth = i * 16;
+        var blueValue = 255 - i * 32;
+        var greenValue = i * 32;
+        ctx.strokeStyle = "rgb(0, " + greenValue + "," + blueValue + ")";
+        ctx.stroke();
+      }
+    </script>
   </body>
 </html>
