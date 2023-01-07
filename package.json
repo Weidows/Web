@@ -6,7 +6,10 @@
   "repository": "https://github.com/Weidows/Web.git",
   "author": "Weidows <utsuko27@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "check-update": "npm-check --skip-unused -u"
+  },
   "dependencies": {
-    "vue-router": "^3.5.2"
+    "vue-router": "4.1.6"
   }
 }
