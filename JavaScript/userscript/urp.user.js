@@ -17,7 +17,7 @@
  * @Author: Weidows
  * @Date: 2023-01-07 15:39:40
  * @LastEditors: Weidows
- * @LastEditTime: 2023-01-07 17:48:20
+ * @LastEditTime: 2023-01-07 17:54:09
  * @FilePath: \Web\JavaScript\userscript\urp.user.js
  * @Description:
  * @!: *********************************************************************
@@ -25,13 +25,12 @@
 
 (function () {
   "use strict";
-  $(document).ready(function () {
-    document.getElementsByTagName("textarea")[0].value = "无";
-    var inputs = document.getElementsByTagName("input");
-    for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].parentNode.childNodes[1] == inputs[i]) {
-        inputs[i].checked = true;
-      }
+
+  document.getElementsByTagName("textarea")[0].value = "无";
+  var inputs = document.getElementsByTagName("input");
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].parentNode.childNodes[1] == inputs[i]) {
+      inputs[i].checked = true;
     }
-  });
+  }
 })();
