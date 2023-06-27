@@ -8,8 +8,5 @@
   "license": "MIT",
   "scripts": {
     "check-update": "npm-check --skip-unused -u"
-  },
-  "dependencies": {
-    "vue-router": "4.1.6"
   }
 }
