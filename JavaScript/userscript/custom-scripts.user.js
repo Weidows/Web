@@ -4,10 +4,10 @@
 // @namespace    https://github.com/Weidows/Web/raw/master/JavaScript/userscript/custom-scripts.user.js
 // @homepage     https://greasyfork.org/zh-CN/scripts/469533
 // @supportURL   https://github.com/Weidows/Web
-// @version      0.2.0
+// @version      0.2.1
 // @author       Weidows
 // @match        *://*.bilibili.com/*
-// @match        *://store.steampowered.com/account/preferences/*
+// @match        *://store.steampowered.com/account/preferences*
 // @license      MIT
 // @grant        none
 // ==/UserScript==
@@ -17,7 +17,7 @@
  * @Author: Weidows
  * @LastEditors: Weidows
  * @Date: 2023-06-26 23:49:06
- * @LastEditTime: 2023-09-06 04:16:55
+ * @LastEditTime: 2023-09-23 13:47:21
  * @FilePath: \Web\JavaScript\userscript\custom-scripts.user.js
  * @Description:
  * @?: *********************************************************************
@@ -62,10 +62,7 @@ function handleBilibili() {
 }
 
 function handleSteam() {
-  let hides = document.getElementsByClassName(
-    "account_setting_not_customer_facing"
-  );
-  for (; hides.length != 0; ) {
-    hides[0].classList.remove("account_setting_not_customer_facing");
-  }
+  document
+    .querySelectorAll(".preference_row.account_setting_not_customer_facing ")
+    .forEach((i) => i.classList.remove("account_setting_not_customer_facing"));
 }
