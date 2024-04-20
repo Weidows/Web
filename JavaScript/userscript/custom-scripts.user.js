@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         自用集合-Weidows
-// @description  1.度盘链接添加前缀(常见于B站 s/xxxx?pwd=xxxx 这样的) | 2.将steam偏好隐藏选项显示出来
+// @description  1.度盘链接添加前缀(常见于B站 s/xxxx?pwd=xxxx 这样的) | 2.将steam偏好隐藏选项显示出来 | 3.Add a button to convert GitHub file links to JsDelivr links
 // @namespace    https://github.com/Weidows/Web/raw/master/JavaScript/userscript/custom-scripts.user.js
 // @homepage     https://greasyfork.org/zh-CN/scripts/469533
 // @supportURL   https://github.com/Weidows/Web
-// @version      0.2.1
+// @version      0.3.0
 // @author       Weidows
 // @match        *://*.bilibili.com/*
 // @match        *://store.steampowered.com/account/preferences*
+// @match        *://github.com/*
 // @license      MIT
 // @grant        none
 // ==/UserScript==
@@ -17,9 +18,14 @@
  * @Author: Weidows
  * @LastEditors: Weidows
  * @Date: 2023-06-26 23:49:06
- * @LastEditTime: 2023-09-23 13:47:21
+ * @LastEditTime: 2024-04-21 06:05:16
  * @FilePath: \Web\JavaScript\userscript\custom-scripts.user.js
  * @Description:
+
+3.Add a button to convert GitHub file links to JsDelivr links
+
+![5dfSz8PDEhjwWuG.png](https://s2.loli.net/2024/04/21/5dfSz8PDEhjwWuG.png)
+
  * @?: *********************************************************************
  */
 
@@ -29,6 +35,8 @@ https: (function () {
     handleBilibili();
   } else if (window.location.host.includes("steampowered.com")) {
     handleSteam();
+  } else if (window.location.host.includes("github.com")) {
+    handleGithub();
   }
 })();
 
@@ -65,4 +73,26 @@ function handleSteam() {
   document
     .querySelectorAll(".preference_row.account_setting_not_customer_facing ")
     .forEach((i) => i.classList.remove("account_setting_not_customer_facing"));
+}
+
+function handleGithub() {
+  // Function to convert GitHub URL to JsDelivr URL
+  function convertToJsDelivr(url) {
+    return url
+      .replace("https://github.com", "https://cdn.jsdelivr.net/gh")
+      .replace(/blob\/[^\/]+\//, "");
+  }
+
+  // Function to create and add the new button
+  var targetButton = document.getElementsByClassName("fnqUrX")[0];
+  if (targetButton) {
+    var newButton = targetButton.cloneNode(true);
+    newButton.title = "Copy JsDelivr link";
+    newButton.onclick = function () {
+      var currentUrl = window.location.href;
+      var jsDelivrUrl = convertToJsDelivr(currentUrl);
+      navigator.clipboard.writeText(jsDelivrUrl);
+    };
+    targetButton.parentNode.insertBefore(newButton, targetButton.nextSibling);
+  }
 }
